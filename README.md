@@ -2,10 +2,9 @@
 
 面向 Windows 的 Codex 多账号管理工具，支持额度查看、无感切号和吸顶小面板。
 
-把账号集中管理，把额度一眼看清，让切换账号少打断一次工作。
-
 ## 功能特色
 
+- **超小体积**：文件体积1.16M，运行内存占用约6M。
 - **无感切号**：连接就绪后，正常切换保持 Codex 窗口及后台进程运行。有对话进行时，等待当前轮结束后切换，下一轮使用所选账号。
 - **额度总览**：查看各账号的 5 小时、每周剩余额度、重置时间及订阅信息。
 - **批量与自动刷新**：支持单账号、全部账号刷新，可设置刷新间隔与并发数量。
@@ -36,20 +35,6 @@
 
 账号凭据、账号列表和设置保存在 `%LOCALAPPDATA%\CodexSwitch\`。凭据文件包含登录授权信息，请妥善保管，不要放入公开仓库或随问题反馈上传。
 
-## 从源码构建
-
-需要 Rust 的 Windows MSVC 工具链、Visual Studio C++ 构建工具及 Windows SDK。
-
-在仓库根目录运行：
-
-```powershell
-cd codex-switch
-cargo build --release --locked
-```
-
-产物为 `codex-switch/target/release/codex-switch.exe`。首次构建需要下载 Cargo 依赖，运行软件无需安装 Rust。
-
-源码、资源、构建配置及测试均位于 [`codex-switch/`](codex-switch/)。构建、测试与命令行说明见[开发文档](codex-switch/README.md)。
 
 ## 反馈与贡献
 
